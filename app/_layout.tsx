@@ -3,8 +3,17 @@ import React from "react";
 
 export default function _layout() {
   return (
-    <Stack>
-      <Stack.Screen name="[productId]" options={{ headerShown: false }} />
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        contentStyle: {
+          backgroundColor: "#1A2F2F",
+        },
+      }}
+    >
+      <Stack.Screen name="index" />
+      <Stack.Screen name="/signup" />
+      <Stack.Screen name="/[id]" />
     </Stack>
   );
 }

@@ -1,13 +1,31 @@
-import { Link } from "expo-router";
-import { StyleSheet, Text, View } from "react-native";
+import Constants from "expo-constants";
+import { StyleSheet, View, Text } from "react-native";
+import Logo from "../components/Logo";
+import CustomButton from "../components/CustomButton";
+import Title from "../components/Title";
+import { homeText } from "../mocks/data";
+import Flex from "../components/Flex";
+import { useRouter } from "expo-router";
 
-export default function Page() {
+//? USO DO USEROUTER
+
+export default function App() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
-      <View style={styles.main}>
-        <Text style={styles.title}>Hello World</Text>
-        <Link href="/login">Ir para login</Link>
-      </View>
+      <Logo width={250} height={250} />
+      <Flex justify="center" align="center" direction="column" gap={30}>
+        <Title
+          center={true}
+          title={homeText.title}
+          subtitle={homeText.subtitle}
+        />
+      </Flex>
+
+      <CustomButton onPress={() => router.push("/signup")}>
+        <Text>Clique aqui e se inscreva</Text>
+      </CustomButton>
     </View>
   );
 }
@@ -15,21 +33,9 @@ export default function Page() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: Constants.statusBarHeight,
     alignItems: "center",
-    padding: 24,
-  },
-  main: {
-    flex: 1,
     justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
-  },
-  title: {
-    fontSize: 64,
-    fontWeight: "bold",
-  },
-  subtitle: {
-    fontSize: 36,
-    color: "#38434D",
+    gap: 25,
   },
 });
