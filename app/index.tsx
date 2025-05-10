@@ -3,7 +3,7 @@ import { StyleSheet, View, Text } from "react-native";
 import Logo from "../components/Logo";
 import CustomButton from "../components/CustomButton";
 import Title from "../components/Title";
-import { homeText } from "../mocks/data";
+import { homeText } from "../mocks/data.json";
 import Flex from "../components/Flex";
 import { useRouter } from "expo-router";
 
@@ -24,7 +24,7 @@ export default function App() {
       </Flex>
 
       <CustomButton onPress={() => router.push("/signup")}>
-        <Text>Clique aqui e se inscreva</Text>
+        LET'S GO
       </CustomButton>
     </View>
   );

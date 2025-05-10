@@ -1,0 +1,75 @@
+{
+  "homeText": {
+    "title": "Bla bla bla algum titulo",
+    "subtitle": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500..."
+  },
+  "mockUsers": [
+    {
+      "id": "1",
+      "email": "teste@email.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "email": "milena@exemplo.com",
+      "password": "senhaTeste"
+    }
+  ],
+
+  "travelContents": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "titulo": "Trip to Paris",
+      "corpo": "I arrived in Paris yesterday. The weather was great, and I spent the day exploring the Eiffel Tower and the surrounding areas. The French food is amazing, especially the croissants!",
+      "image": "https://res.cloudinary.com/dso7vvpma/image/upload/v1746894041/Traveller_with_suitcase_cqpnhg.png",
+      "criado": "2025-05-10T10:00:00Z",
+      "atualizado": "2025-05-10T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "titulo": "Exploring Rome",
+      "corpo": "Rome is a city full of history. I visited the Colosseum and the Trevi Fountain, both of which were stunning. I can't wait to visit the Vatican tomorrow.",
+      "image": "https://res.cloudinary.com/dso7vvpma/image/upload/v1746894041/Sharing_ktjgig.png",
+      "criado": "2025-05-09T14:00:00Z",
+      "atualizado": "2025-05-09T15:00:00Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "titulo": "Day Trip in Amsterdam",
+      "corpo": "I spent the day exploring the canals of Amsterdam and visiting the Van Gogh Museum. The city is charming, filled with bicycles and unique architecture.",
+      "image": "https://res.cloudinary.com/dso7vvpma/image/upload/v1746894041/Plane_ride_vyd201.png",
+      "criado": "2025-05-08T12:00:00Z",
+      "atualizado": "2025-05-08T12:30:00Z"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "titulo": "New York Adventure",
+      "corpo": "My trip to New York was amazing! I visited Times Square, Central Park, and the Empire State Building. The city never sleeps, and there’s always something exciting to do!",
+      "image": "https://res.cloudinary.com/dso7vvpma/image/upload/v1746894041/Booking_xsotaf.png",
+      "criado": "2025-05-07T18:00:00Z",
+      "atualizado": "2025-05-07T18:30:00Z"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "titulo": "Beach Vacation in Bali",
+      "corpo": "Bali was a paradise! I spent my days lounging on the beach, trying out local cuisine, and exploring the temples. The sunsets were absolutely breathtaking.",
+      "image": "https://res.cloudinary.com/dso7vvpma/image/upload/v1746894041/Wagon_kkbjqz.png",
+      "criado": "2025-05-06T09:00:00Z",
+      "atualizado": "2025-05-06T09:30:00Z"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "titulo": "Tokyo Sightseeing",
+      "corpo": "Tokyo was an exciting mix of modernity and tradition. I visited the Senso-ji Temple, then checked out the Shibuya Crossing and some high-tech shopping malls.",
+      "image": "https://res.cloudinary.com/dso7vvpma/image/upload/v1746894041/Hiking_aadbq1.png",
+      "criado": "2025-05-05T15:00:00Z",
+      "atualizado": "2025-05-05T15:30:00Z"
+    }
+  ]
+}

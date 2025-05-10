@@ -20,7 +20,7 @@ export default function CustomButton({
       onPress={onPress}
       disabled={disabled}
       style={{
-        backgroundColor: disabled ? "#A5B4FC" : "#98E3F5",
+        backgroundColor: disabled ? "#A5B4FC" : "#27A1A1",
         paddingVertical: 12,
         paddingHorizontal: 20,
         borderRadius: 8,
@@ -31,7 +31,7 @@ export default function CustomButton({
       {typeof children === "string" ? (
         <Text
           style={{
-            color: "#1A2F2F",
+            color: "#FFFFFF",
             fontWeight: "bold",
             fontSize: 16,
             ...(textStyle as Object),

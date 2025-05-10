@@ -11,11 +11,12 @@ export default function Card({ style, children }: CardProps) {
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 1,
     backgroundColor: "white",
     padding: 16,
-    borderRadius: 8,
+    borderRadius: 10,
     alignItems: "center",
     gap: 16,
+    flex: 1,
+    alignSelf: "stretch",
   },
 });
