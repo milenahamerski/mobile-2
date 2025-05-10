@@ -11,8 +11,7 @@ export default function _layout() {
         },
       }}
     >
-      <Stack.Screen name="index" />
-      <Stack.Screen name="signup" />
+      <Stack.Screen name="[id]" />
     </Stack>
   );
 }

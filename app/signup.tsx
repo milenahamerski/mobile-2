@@ -9,7 +9,7 @@ import {
   Alert,
 } from "react-native";
 import { useRouter } from "expo-router";
-import { mockUsers } from "../mocks/data";
+import { mockUsers } from "../mocks/data.json";
 import Card from "../components/Card";
 import FormInput from "../components/FormInput";
 import Title from "../components/Title";
@@ -33,7 +33,7 @@ export default function SignUpForm() {
 
     if (foundUser) {
       setUserId(foundUser.id);
-      router.push(`/${foundUser.id}`);
+      router.push(`/users/${foundUser.id}`);
     } else {
       Alert.alert(
         "Erro",
@@ -44,10 +44,14 @@ export default function SignUpForm() {
 
   return (
     <View style={styles.container}>
-      <Logo width={70} height={70} />
+      <Logo width={70} height={70} style={{ marginTop: 30 }} />
 
       <Card style={styles.card}>
-        <Title center title="Sign up" />
+        <Title
+          title="Welcome Back!"
+          titleStyle={{ color: "#FF9900" }}
+          style={{ alignSelf: "flex-start", marginBottom: 10 }}
+        />
 
         <FormInput
           error=""
@@ -63,8 +67,13 @@ export default function SignUpForm() {
           secureTextEntry
         />
 
-        <Flex direction="row" align="center" justify="space-between">
-          <Text>Subscribe to our newsletter</Text>
+        <Flex
+          direction="row"
+          align="center"
+          justify="space-between"
+          style={{ alignSelf: "flex-start" }}
+        >
+          <Text>Remember me</Text>
           <Switch
             value={subscribe}
             onValueChange={setSubscribe}
@@ -72,7 +81,7 @@ export default function SignUpForm() {
           />
         </Flex>
 
-        <CustomButton onPress={handleSignUp}>Let's Go!</CustomButton>
+        <CustomButton onPress={handleSignUp}>SIGN IN</CustomButton>
       </Card>
     </View>
   );
@@ -80,16 +89,17 @@ export default function SignUpForm() {
 
 const styles = StyleSheet.create({
   card: {
-    width: "80%",
-    height: screenHeight * 0.75,
-    marginTop: 32,
+    flex: 1,
+    marginTop: 20,
     justifyContent: "center",
     gap: 16,
+    alignSelf: "stretch",
   },
   container: {
     flex: 1,
     marginTop: Constants.statusBarHeight,
     alignItems: "center",
     justifyContent: "center",
+    gap: 50,
   },
 });
