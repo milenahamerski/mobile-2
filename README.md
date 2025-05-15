@@ -16,8 +16,9 @@ O objetivo do Mundi é funcionar como um diário de viagens pessoal. O aplicativ
 - Editar ou remover registros de viagem
 
 ---
-##Telas criadas
-![Tela 1](https://res.cloudinary.com/dso7vvpma/image/upload/v1747269047/Screenshot_from_2025-05-14_21-28-54_kdrfcf.png)
+## Telas criadas
+
+![Tela_1](https://res.cloudinary.com/dso7vvpma/image/upload/v1747269047/Screenshot_from_2025-05-14_21-28-54_kdrfcf.png)
 
 ![Tela 2](https://res.cloudinary.com/dso7vvpma/image/upload/v1747269048/Screenshot_from_2025-05-14_21-29-19_gqfwsr.png)
 
