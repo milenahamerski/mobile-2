@@ -7,7 +7,8 @@
     {
       "id": "1",
       "email": "teste@email.com",
-      "password": "123456"
+      "password": "123456",
+      "photo": "https://mighty.tools/mockmind-api/content/human/125.jpg"
     },
     {
       "id": "2",

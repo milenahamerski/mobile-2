@@ -35,10 +35,10 @@ export default function SignUpForm() {
       setUserId(foundUser.id);
       router.push(`/users/${foundUser.id}`);
     } else {
-      Alert.alert(
-        "Erro",
-        "Usuário não encontrado. Verifique suas credenciais."
-      );
+      // Alert.alert(
+      //   "Erro",
+      //   "Usuário não encontrado. Verifique suas credenciais."  //! FAZER AS TRATATIVAS DE SENHA
+      // );
     }
   };
 
