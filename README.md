@@ -4,9 +4,12 @@ Mundi é um aplicativo mobile desenvolvido com **React Native** e **Expo**, volt
 Com ele, você pode anotar destinos, datas, observações e manter um histórico das suas experiências pelo mundo.
 
 ---
-## Design sistem
-[Desing no Figma](https://res.cloudinary.com/dso7vvpma/image/upload/v1747269047/Screenshot_from_2025-05-14_21-28-54_kdrfcf.png](https://www.figma.com/design/0VQlP8P0Y4WE1c2G3n3YZw/mobile?node-id=0-1&t=jzfOtkoFqobkVIyL-1)
+## Design System
+
+[Design no Figma](https://www.figma.com/design/0VQlP8P0Y4WE1c2G3n3YZw/mobile?node-id=0-1&t=jzfOtkoFqobkVIyL-1)
+
 ---
+
 ## Objetivo
 
 O objetivo do Mundi é funcionar como um diário de viagens pessoal. O aplicativo permite:
