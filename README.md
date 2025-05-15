@@ -47,7 +47,7 @@ O objetivo do Mundi é funcionar como um diário de viagens pessoal. O aplicativ
 
 ## Como executar o projeto
 ```bash
-   git clone [<URL_DO_REPOSITORIO>](https://github.com/milenahamerski/mobile-2.git)
+   git clone https://github.com/milenahamerski/mobile-2.git
 ```
 ```bash
    yarn install
