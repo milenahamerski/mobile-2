@@ -20,11 +20,14 @@ import CustomButton from "../components/CustomButton";
 const { height: screenHeight } = Dimensions.get("window");
 
 export default function SignUpForm() {
+  //? USESTATE
   const [email, setEmail] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
   const [subscribe, setSubscribe] = React.useState<boolean>(false);
   const [userId, setUserId] = React.useState<string | null>(null);
   const router = useRouter();
+
+  const isFormValid = email.trim() !== "" && password.trim() !== "";
 
   const handleSignUp = () => {
     const foundUser = mockUsers.find(
@@ -35,10 +38,10 @@ export default function SignUpForm() {
       setUserId(foundUser.id);
       router.push(`/users/${foundUser.id}`);
     } else {
-      // Alert.alert(
-      //   "Erro",
-      //   "Usuário não encontrado. Verifique suas credenciais."  //! FAZER AS TRATATIVAS DE SENHA
-      // );
+      Alert.alert(
+        "Erro",
+        "Usuário não encontrado. Verifique suas credenciais." // TODO: melhorar validação futuramente
+      );
     }
   };
 
@@ -81,7 +84,9 @@ export default function SignUpForm() {
           />
         </Flex>
 
-        <CustomButton onPress={handleSignUp}>SIGN IN</CustomButton>
+        <CustomButton onPress={handleSignUp} disabled={!isFormValid}>
+          SIGN IN
+        </CustomButton>
       </Card>
     </View>
   );
