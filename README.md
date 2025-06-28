@@ -43,6 +43,12 @@ O objetivo do Mundi é funcionar como um diário de viagens pessoal. O aplicativ
 - TypeScript
 - Expo Router
 
+## Diferença entre Testes Unitários e Testes E2E (End to End) em aplicações mobile
+- Testes Unitários verificam pequenas partes isoladas do código, como funções, componentes ou métodos individuais. Eles são rápidos e ajudam a garantir que cada pedaço do código funciona corretamente de forma **independente**.
+Exemplo: testar se um componente React Native renderiza corretamente com determinadas props.
+
+- Testes E2E (End to End) simulam o uso real do aplicativo do começo ao fim, testando fluxos completos, interagindo com a interface como um **usuário** faria. Eles garantem que todas as partes do sistema (frontend, backend, banco de dados) funcionem integradas corretamente.
+Exemplo: abrir o app, preencher um formulário, salvar uma viagem e verificar se a viagem aparece na lista.
 ---
 
 ## Como executar o projeto
@@ -54,4 +60,16 @@ O objetivo do Mundi é funcionar como um diário de viagens pessoal. O aplicativ
 ```
 ```bash
    yarn start
+```
+## Como executar os testes
+### Testes Unitários:
+Estes testes são escritos com Jest e React Testing Library. Para rodá-los:
+```bash
+   yarn test
+```
+
+### Testes E2E (End to End):
+Usamos Playwright para testes E2E que simulam a interação real com o aplicativo. Para rodá-los, use:
+```bash
+   yarn test:e2e
 ```
