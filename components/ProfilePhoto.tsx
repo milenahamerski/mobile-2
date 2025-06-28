@@ -1,4 +1,3 @@
-// components/ProfilePhoto.tsx
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
 
@@ -9,7 +8,8 @@ interface ProfilePhotoProps {
 export default function ProfilePhoto({ uri }: ProfilePhotoProps) {
   return (
     <View style={styles.container}>
-      <Image source={{ uri }} style={styles.image} />
+      <Image testID="profile-image" source={{ uri }} style={styles.image} />
+      //? testID usado para testes (getByTestId)
     </View>
   );
 }

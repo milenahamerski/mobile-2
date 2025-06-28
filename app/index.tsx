@@ -8,7 +8,6 @@ import Flex from "../components/Flex";
 import { useRouter } from "expo-router";
 
 //? USO DO USEROUTER
-
 export default function App() {
   const router = useRouter();
 

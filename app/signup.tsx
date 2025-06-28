@@ -25,9 +25,21 @@ export default function SignUpForm() {
   const [password, setPassword] = React.useState<string>("");
   const [subscribe, setSubscribe] = React.useState<boolean>(false);
   const [userId, setUserId] = React.useState<string | null>(null);
+  const [emailMessage, setMessage] = React.useState<string>("");
+
   const router = useRouter();
 
   const isFormValid = email.trim() !== "" && password.trim() !== "";
+
+  //? USEEFFECT
+  React.useEffect(() => {
+    if (email && (!email.includes("@") || !email.includes("."))) {
+      setMessage("Digite um email válido.");
+      return;
+    }
+
+    setMessage("");
+  }, [email]);
 
   const handleSignUp = () => {
     const foundUser = mockUsers.find(
@@ -62,6 +74,14 @@ export default function SignUpForm() {
           value={email}
           onChangeText={setEmail}
         />
+
+        {emailMessage !== "" && (
+          <Text
+            style={emailMessage.includes("✅") ? styles.valid : styles.invalid}
+          >
+            {emailMessage}
+          </Text>
+        )}
 
         <FormInput
           value={password}
@@ -106,5 +126,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 50,
+  },
+  valid: {
+    color: "green",
+    fontSize: 14,
+    alignSelf: "flex-start",
+    marginTop: -10,
+    marginBottom: 10,
+  },
+  invalid: {
+    color: "#BB342F",
+    fontSize: 14,
+    alignSelf: "flex-start",
+    marginTop: -10,
+    marginBottom: 10,
   },
 });
