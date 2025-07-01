@@ -1,6 +1,7 @@
 import { useLocalSearchParams } from "expo-router";
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import { travelContents } from "../../../../mocks/data.json";
+import React from "react";
 
 export default function TripDetailPage() {
   const { trip } = useLocalSearchParams();

@@ -6,6 +6,7 @@ import Title from "../components/Title";
 import { homeText } from "../mocks/data.json";
 import Flex from "../components/Flex";
 import { useRouter } from "expo-router";
+import React from "react";
 
 //? USO DO USEROUTER
 export default function App() {
