@@ -6,6 +6,7 @@ import Card from "../../../components/Card";
 import ProfilePhoto from "../../../components/ProfilePhoto";
 import { travelContents, mockUsers } from "../../../mocks/data.json";
 import { useActionSheet } from "@expo/react-native-action-sheet";
+import React from "react";
 
 export default function TravelPage() {
   const { id } = useLocalSearchParams();

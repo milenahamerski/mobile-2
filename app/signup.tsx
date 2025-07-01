@@ -1,13 +1,6 @@
 import React from "react";
 import Constants from "expo-constants";
-import {
-  Dimensions,
-  StyleSheet,
-  Text,
-  View,
-  Switch,
-  Alert,
-} from "react-native";
+import { Dimensions, StyleSheet, Text, View, Switch } from "react-native";
 import { useRouter } from "expo-router";
 import { mockUsers } from "../mocks/data.json";
 import Card from "../components/Card";
@@ -20,24 +13,22 @@ import CustomButton from "../components/CustomButton";
 const { height: screenHeight } = Dimensions.get("window");
 
 export default function SignUpForm() {
-  //? USESTATE
   const [email, setEmail] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
   const [subscribe, setSubscribe] = React.useState<boolean>(false);
   const [userId, setUserId] = React.useState<string | null>(null);
   const [emailMessage, setMessage] = React.useState<string>("");
+  const [loginError, setLoginError] = React.useState<string>("");
 
   const router = useRouter();
 
   const isFormValid = email.trim() !== "" && password.trim() !== "";
 
-  //? USEEFFECT
   React.useEffect(() => {
     if (email && (!email.includes("@") || !email.includes("."))) {
       setMessage("Digite um email válido.");
       return;
     }
-
     setMessage("");
   }, [email]);
 
@@ -47,13 +38,11 @@ export default function SignUpForm() {
     );
 
     if (foundUser) {
+      setLoginError("");
       setUserId(foundUser.id);
       router.push(`/users/${foundUser.id}`);
     } else {
-      Alert.alert(
-        "Erro",
-        "Usuário não encontrado. Verifique suas credenciais." // TODO: melhorar validação futuramente
-      );
+      setLoginError("Usuário ou senha inválidos. Verifique suas credenciais.");
     }
   };
 
@@ -89,6 +78,8 @@ export default function SignUpForm() {
           placeholder="Password"
           secureTextEntry
         />
+
+        {loginError !== "" && <Text style={styles.invalid}>{loginError}</Text>}
 
         <Flex
           direction="row"
